@@ -1,0 +1,28 @@
+{
+  "name": "javascriptelevatorchallenge",
+  "version": "1.0.0",
+  "description": "A technical challenge on JavaScript",
+  "main": "elevator.js",
+  "scripts": {
+    "test": "run();"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennifermarsman/JavaScriptElevatorChallenge.git"
+  },
+  "keywords": [
+    "javascript",
+    "async",
+    "generator",
+    "promise"
+  ],
+  "author": "Jennifer Marsman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jennifermarsman/JavaScriptElevatorChallenge/issues"
+  },
+  "homepage": "https://github.com/jennifermarsman/JavaScriptElevatorChallenge#readme",
+  "dependencies": {
+    "tostr": "^0.1.0"
+  }
+}
