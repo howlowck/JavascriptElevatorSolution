@@ -25,11 +25,10 @@ function run() {
     console.log('Beginning the elevator challenge - run 1');
     var iterator = readElevatorRequestFromFile();   // TODO: need to read async
     var request = iterator.next();
-    console.log(tostr(request.done));   // This value is a hint.  
+    //console.log(tostr(request.done));   // This value is a hint.  
 
     while (request.done === false)
     {
-        console.log('inside while loop');
         // Parsing out the request
         var items = request.value.split(" ");
         var toFloor = items[0];
@@ -67,17 +66,18 @@ function allocateElevator(elevatorNum) {
 }
 
 function moveElevator(elevator, fromFloor, toFloor) {
-    console.log("Moving elevator " + elevator + " from " + str(fromFloor) + " to " + str(toFloor));
+    console.log("Moving elevator " + tostr(elevator) + " from " + tostr(fromFloor) + " to " + tostr(toFloor));
     
     // Start timer based on the distance between floors
     var distance = Math.abs(fromFloor - toFloor);
-    setTimeout(elevatorArrived, distance * timePerFloor);
+    setTimeout(elevatorArrived(elevator), distance * timePerFloor);
 }
 
 function elevatorArrived(elevatorNum) {
+    console.log("Elevator " + tostr(elevatorNum) + " arrived!");
     elevatorInUse[elevatorNum] = 0;     // available again, so reassign
     allocateElevator(elevatorNum);
 }
 
-run();      // or you are welcome to start with run2 sample code if you prefer
+run2();      // or you are welcome to start with run sample code if you prefer
 
