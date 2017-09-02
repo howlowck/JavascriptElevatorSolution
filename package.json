@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jennifermarsman/JavaScriptElevatorChallenge#readme",
   "dependencies": {
+    "rxjs": "^5.4.3",
     "tostr": "^0.1.0"
   }
 }
